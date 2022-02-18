@@ -4,17 +4,18 @@ import org.jsoup.select.Elements;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class CryptoConvGUI extends JFrame{
 
     private JPanel mainPanel;
     private JTextField passValueTextField;
-    private JLabel passValueLabel;
     private JButton convertBtn;
+    private JLabel passValueLabel;
     private JLabel resultLabel;
+    private JLabel oneBtcValueLabel;
+
+    private double result;
 
     public CryptoConvGUI(String title) {
         super(title);
@@ -27,18 +28,24 @@ public class CryptoConvGUI extends JFrame{
         this.setResizable(true);
         this.pack();
 
-        convertBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        convertBtn.addActionListener(e -> {
+            result = parseAndCalculateResult(fetchBtcValue(), passValueTextField.getText());
 
-                resultLabel.setText(parseAndCalculateResult(fetchBtcValue(), passValueTextField.getText()) + " BTC");
+            if(result > 0.0) {
+                resultLabel.setText(result + " BTC");
+                oneBtcValueLabel.setText("1 BTC = " + fetchBtcValue() + " PLN.");
+            } else {
+                resultLabel.setText("Wrong data.");
             }
+
         });
     }
 
     public static void main(String[] args) {
+        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
         JFrame frame = new CryptoConvGUI("Crypto Currency Converter");
-        frame.setBounds(500,500,500,500);
+
+        frame.setBounds(0,0,(int)size.getWidth()/2, (int)size.getHeight()/2);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -53,8 +60,8 @@ public class CryptoConvGUI extends JFrame{
 
         } catch (IOException e) {
             e.printStackTrace();
+            return "0";
         }
-        return "";
     }
 
     double parseAndCalculateResult(String fetchedValue, String passedValue) {

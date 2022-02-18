@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="CryptoConvGUI">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="19" y="20" width="501" height="400"/>
+      <xy x="19" y="20" width="1154" height="569"/>
     </constraints>
     <properties>
       <background color="-14474461"/>
-      <enabled value="false"/>
+      <enabled value="true"/>
       <font name="Lato" size="18"/>
       <foreground color="-2434342"/>
     </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="true"/>
+    </clientProperties>
     <border type="none"/>
     <children>
-      <component id="960ba" class="javax.swing.JTextField" binding="passValueTextField">
+      <component id="9038b" class="javax.swing.JLabel" binding="resultLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="10" height="-1"/>
-          </grid>
+          <grid row="2" column="0" row-span="2" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font size="26"/>
-          <text value=""/>
+          <font size="36"/>
+          <foreground color="-2434342"/>
+          <text value="Result will show up here."/>
         </properties>
       </component>
+      <hspacer id="ade44">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="139"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="eb1b4">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="139"/>
+          </grid>
+        </constraints>
+      </hspacer>
       <component id="438c5" class="javax.swing.JLabel" binding="passValueLabel">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <enabled value="false"/>
@@ -35,29 +51,66 @@
           <text value="PLN"/>
         </properties>
       </component>
+      <component id="960ba" class="javax.swing.JTextField" binding="passValueTextField">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="10" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font size="26"/>
+          <text value=""/>
+        </properties>
+      </component>
       <component id="6e3b4" class="javax.swing.JButton" binding="convertBtn">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="122" height="139"/>
+          </grid>
         </constraints>
         <properties>
           <background color="-14073549"/>
           <enabled value="true"/>
           <font name="Lato" size="24" style="1"/>
           <foreground color="-1907998"/>
+          <hideActionText value="true"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
           <text value="Convert"/>
+          <verticalAlignment value="0"/>
         </properties>
         <clientProperties>
           <hideActionText class="java.lang.Boolean" value="false"/>
+          <html.disable class="java.lang.Boolean" value="true"/>
         </clientProperties>
       </component>
-      <component id="9038b" class="javax.swing.JLabel" binding="resultLabel">
+      <hspacer id="9d50d">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="298f1">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="226" height="139"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="67dc7">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="139" height="139"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <component id="43514" class="javax.swing.JLabel" binding="oneBtcValueLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font size="36"/>
-          <foreground color="-2434342"/>
-          <text value="Result will show up here."/>
+          <font name="Consolas" size="20" style="2"/>
+          <foreground color="-4865281"/>
+          <text value=""/>
         </properties>
       </component>
     </children>
