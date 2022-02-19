@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="CryptoConvGUI">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
     <constraints>
-      <xy x="19" y="20" width="1154" height="569"/>
+      <xy x="19" y="20" width="1031" height="566"/>
     </constraints>
     <properties>
       <background color="-14474461"/>
@@ -18,7 +18,7 @@
     <children>
       <component id="9038b" class="javax.swing.JLabel" binding="resultLabel">
         <constraints>
-          <grid row="2" column="0" row-span="2" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="4" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="500" height="-1"/>
             <maximum-size width="500" height="-1"/>
           </grid>
@@ -29,56 +29,33 @@
           <text value="Result will show up here."/>
         </properties>
       </component>
-      <hspacer id="ade44">
+      <component id="43514" class="javax.swing.JLabel" binding="oneBtcValueLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="14" height="139"/>
-          </grid>
-        </constraints>
-      </hspacer>
-      <hspacer id="eb1b4">
-        <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="14" height="139"/>
-          </grid>
-        </constraints>
-      </hspacer>
-      <component id="438c5" class="javax.swing.JLabel" binding="passValueLabel">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <enabled value="false"/>
-          <font size="26"/>
-          <foreground color="-2434342"/>
-          <text value="PLN"/>
-        </properties>
-      </component>
-      <component id="960ba" class="javax.swing.JTextField" binding="passValueTextField">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="300" height="30"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font size="26"/>
+          <font name="Consolas" size="20" style="2"/>
+          <foreground color="-4865281"/>
           <text value=""/>
         </properties>
       </component>
       <component id="6e3b4" class="javax.swing.JButton" binding="convertBtn">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="122" height="80"/>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="83" height="80"/>
           </grid>
         </constraints>
         <properties>
           <background color="-14073549"/>
           <enabled value="true"/>
+          <focusCycleRoot value="true"/>
+          <focusPainted value="false"/>
           <font name="Lato" size="24" style="1"/>
           <foreground color="-1907998"/>
-          <hideActionText value="false"/>
+          <hideActionText value="true"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
+          <inheritsPopupMenu value="false"/>
           <text value="Convert"/>
           <verticalAlignment value="0"/>
         </properties>
@@ -87,24 +64,62 @@
           <html.disable class="java.lang.Boolean" value="true"/>
         </clientProperties>
       </component>
-      <hspacer id="9d50d">
+      <component id="a81c3" class="javax.swing.JRadioButton" binding="btcRadio">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
-      <component id="43514" class="javax.swing.JLabel" binding="oneBtcValueLabel">
-        <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Consolas" size="20" style="2"/>
+          <background color="-14474461"/>
+          <font name="Lato" size="20" style="1"/>
+          <foreground color="-1907998"/>
+          <horizontalAlignment value="2"/>
+          <selected value="true"/>
+          <text value="BitCoin"/>
+        </properties>
+      </component>
+      <component id="a0359" class="javax.swing.JRadioButton" binding="ethereumRadio">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="110" height="80"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14474461"/>
+          <font name="Lato" size="20" style="1"/>
+          <foreground color="-1907998"/>
+          <horizontalTextPosition value="11"/>
+          <text value="Ethereum"/>
+        </properties>
+      </component>
+      <component id="67390" class="javax.swing.JRadioButton" binding="tetherRadio">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14474461"/>
+          <font name="Lato" size="20" style="1"/>
+          <foreground color="-1907998"/>
+          <text value="Tether"/>
+        </properties>
+      </component>
+      <component id="438c5" class="javax.swing.JLabel" binding="passValueLabel">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="10" height="10"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <font size="26"/>
           <foreground color="-4865281"/>
-          <text value=""/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="PLN"/>
         </properties>
       </component>
       <component id="56231" class="javax.swing.JButton" binding="reverseBtn">
         <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+          <grid row="2" column="5" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="122" height="80"/>
           </grid>
         </constraints>
@@ -115,6 +130,42 @@
           <text value="Reverse"/>
         </properties>
       </component>
+      <component id="960ba" class="javax.swing.JTextField" binding="passValueTextField">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="330" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="0"/>
+          <font size="26"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <hspacer id="82319">
+        <constraints>
+          <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="133" height="80"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <hspacer id="41680">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="17db4">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="radioGroup">
+      <member id="a81c3"/>
+      <member id="a0359"/>
+      <member id="67390"/>
+    </group>
+  </buttonGroups>
 </form>
