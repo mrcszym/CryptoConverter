@@ -13,7 +13,7 @@ public class CryptoConvGUI extends JFrame {
     private JButton convertBtn;
     private JLabel passValueLabel;
     private JLabel resultLabel;
-    private JLabel oneBtcValueLabel;
+    private JLabel oneValueLabel;
     private JButton reverseBtn;
     private JRadioButton btcRadio;
     private JRadioButton ethereumRadio;
@@ -32,24 +32,24 @@ public class CryptoConvGUI extends JFrame {
         this.setResizable(false);
         this.pack();
 
-        oneBtcValueLabel.setText("Here will be real-time crypto currency value to PLN.");
+        oneValueLabel.setText("Here you'll see real-time cryptocurrency value to PLN.");
 
         btcRadio.addActionListener(e -> {
             passValueLabel.setText("PLN");
             resultLabel.setText("BTC");
-            oneBtcValueLabel.setText("1 BTC = " + fetchBtcValue() + " PLN.");
+            oneValueLabel.setText("1 BTC = " + fetchBtcValue() + " PLN.");
 
         });
         ethereumRadio.addActionListener(e -> {
             passValueLabel.setText("PLN");
             resultLabel.setText("ETH");
-            oneBtcValueLabel.setText("1 ETH = " + fetchEthValue() + " PLN.");
+            oneValueLabel.setText("1 ETH = " + fetchEthValue() + " PLN.");
 
         });
         tetherRadio.addActionListener(e -> {
             passValueLabel.setText("PLN");
             resultLabel.setText("USDT");
-            oneBtcValueLabel.setText("1 USDT = " + fetchUsdtValue() + " PLN.");
+            oneValueLabel.setText("1 USDT = " + fetchUsdtValue() + " PLN.");
 
         });
 
@@ -98,22 +98,22 @@ public class CryptoConvGUI extends JFrame {
             case "PLN" -> {
                 result = parseAndCalculateResult(fetchBtcValue(), passValueTextField.getText(), "PLN");
                 resultLabel.setText(result + " PLN");
-                oneBtcValueLabel.setText(fetchBtcValue() + " PLN = 1 BTC.");
+                oneValueLabel.setText(fetchBtcValue() + " PLN = 1 BTC.");
             }
             case "BTC" -> {
                 result = parseAndCalculateResult(fetchBtcValue(), passValueTextField.getText(), "BTC");
                 resultLabel.setText(result + " BTC");
-                oneBtcValueLabel.setText(fetchBtcValue() + " PLN = 1 BTC.");
+                oneValueLabel.setText(fetchBtcValue() + " PLN = 1 BTC.");
             }
             case "ETH" -> {
                 result = parseAndCalculateResult(fetchEthValue(), passValueTextField.getText(), "ETH");
                 resultLabel.setText(result + " ETH");
-                oneBtcValueLabel.setText(fetchEthValue() + " PLN = 1 ETH.");
+                oneValueLabel.setText(fetchEthValue() + " PLN = 1 ETH.");
             }
             case "USDT" -> {
                 result = parseAndCalculateResult(fetchUsdtValue(), passValueTextField.getText(), "USDT");
                 resultLabel.setText(result + " USDT");
-                oneBtcValueLabel.setText(fetchUsdtValue() + " PLN = 1 USDT.");
+                oneValueLabel.setText(fetchUsdtValue() + " PLN = 1 USDT.");
             }
             default -> System.out.println("Error at convertCalculatingCurrency() switch");
         }
@@ -122,11 +122,12 @@ public class CryptoConvGUI extends JFrame {
     public static void main(String[] args) {
 
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-        JFrame frame = new CryptoConvGUI("Crypto Currency Converter");
+        JFrame frame = new CryptoConvGUI("Cryptocurrency Converter");
 
         frame.setBounds(0,0,(int)size.getWidth()/2, (int)size.getHeight()/2);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
     }
 
     static String fetchBtcValue() {
@@ -184,5 +185,6 @@ public class CryptoConvGUI extends JFrame {
             return Double.parseDouble(finalPassedValue) * Double.parseDouble(finalFetchedValue);
         else return -1;
     }
-
 }
+
+
